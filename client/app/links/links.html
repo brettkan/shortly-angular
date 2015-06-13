@@ -1,4 +1,26 @@
 <div id='container' ng-controller="LinksController">
   <!-- Your html here -->
   <!-- <h1> {{ init() }} </h1> -->
+  <div class='navigation'>
+    <ul>
+      <li><a href='#/links' class='index'>All Links</a></li>
+      <li><a href='#/shorten' class='create'>Shorten</a></li>
+      <li id='rightFloatList'><a href='/logout' class='logout'>Log Out</a></li>
+    </ul>
+  </div>
+
+
+<!--   <script id='link' type='text/x-handlebars-template'>
+    <img src='/redirect_icon.png'/>
+    <div class='info'>
+      <div class='visits'><span class='count'>{{visits}}</span>Visits</div>
+      <div class='title'>{{title}}</div>
+      <div class='original'>{{url}}</div>
+      <a href='{{base_url}}/{{code}}'>{{base_url}}/{{code}}</a>
+    </div>
+  </script> -->
+
+
+  {{ data.links }}
+
 </div>
