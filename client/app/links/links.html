@@ -9,8 +9,16 @@
     </ul>
   </div>
 
+  <div class='search'>
+    <form>
+      <input type="url" name="query" ng-model="search">
+    </form>
 
-  <div class='info' ng-repeat='link in data.links'>
+  </div>
+
+
+
+  <div class='info' ng-repeat='link in data.links | orderBy: "visits" : "reverse" | filter: { url: search } '>
     <div class='visits'><span class='count'>{{ link.visits }}</span>Visits</div>
     <div class='title'>{{ link.title }}</div>
     <div class='original'>{{ link.url }}</div>
