@@ -29,6 +29,11 @@ angular.module('shortly', [
       templateUrl: 'app/shorten/shorten.html',
       controller: 'ShortenController'
     })
+    .state('shorten.showlink', {
+      url:"/shortenlist",
+      templateUrl: 'app/shorten/shorten.showlink.html',
+      parent: 'shorten',
+    })
 
 
     // We add our $httpInterceptor into the array

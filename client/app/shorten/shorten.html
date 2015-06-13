@@ -9,7 +9,7 @@
 
   <form name="myForm">
       <input class='text' type='url' name='input' ng-model='targetUrl' required>
-      <input type='submit' value='Shorten' ng-click='addLink(targetUrl)'>
+      <input type='submit' value='Shorten' ng-click='addLink(targetUrl)' ui-sref="shorten.showlink">
       <div role='alert'>
         <span class="error" ng-show="myForm.input.$error.required"> Required! </span>
         <span class="error" ng-show="myForm.input.$error.url"> Not URL </span>
@@ -18,7 +18,6 @@
 <!--   <img class='spinner' src='/spiffygif_46x46.gif'>
  -->  <!-- <div class='message'></div> -->
 
-
-</div>
+ <div ui-view></div>
 
 
