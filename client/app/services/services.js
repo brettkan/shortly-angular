@@ -22,9 +22,20 @@ angular.module('shortly.services', [])
     });
   };
 
+  var redirectUrl = function(code) {
+    return $http({
+      method: 'GET',
+      url: '/api/links/' + code,
+    })
+    .then(function (resp) {
+      return resp.data;
+    });
+  };
+
   return {
     getLinks: getLinks,
-    shortenUrl: shortenUrl
+    shortenUrl: shortenUrl,
+    redirectUrl: redirectUrl
   };
 })
 .factory('Auth', function ($http, $location, $window) {

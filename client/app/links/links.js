@@ -13,5 +13,9 @@ angular.module('shortly.links', [])
     $scope.getLinks();
   };
 
+  $scope.redirectUrl = function(code){
+    Links.redirectUrl(code);
+  };
+
   $scope.init();
 });

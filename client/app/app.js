@@ -27,6 +27,12 @@ angular.module('shortly', [
       templateUrl: 'app/shorten/shorten.html',
       controller: 'ShortenController'
     })
+    .when('/738dd', {
+      controller: function() {
+        console.log('THIS IS HAPPENING');
+        window.location.href = 'http://www.espn.com';
+      }
+    })
 
     // We add our $httpInterceptor into the array
     // of interceptors. Think of it like middleware for your ajax calls
