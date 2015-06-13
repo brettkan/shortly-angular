@@ -12,7 +12,6 @@ angular.module('shortly.services', [])
   };
 
   var shortenUrl = function(url) {
-    console.log("url post, ", JSON.stringify(url));
     return $http({
       method: 'POST',
       url: '/api/links',
